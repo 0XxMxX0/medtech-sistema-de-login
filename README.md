@@ -1,6 +1,6 @@
 <h1 align="center">
   <p>MEDTECH</p>
-  <img src='./IMG/capa readme.png'>
+  <img src='./IMG/Capas readme.png'>
 </h1>
 
 
@@ -34,37 +34,20 @@
 - `Funcionalidade 4`: Capacidade de editar o seu usuario ao logar.
 - `Funcionalidade 5`: Capacidade de pedir uma nova senha por e-mail se você esquecer.
 - `Funcionalidade 6`: Com o login administrativo você vai poder gerenciar todos os usuarios criados na sua plataforma. 
+- `Funcionalidade 6`: Possibilidade de ver senha antes de enviar.
 
 ### Demostração do projeto ✨
-
+[MEDTECH.webm](https://user-images.githubusercontent.com/83671782/209800578-5a429696-de7d-49ee-aaf2-30d195d9642f.webm)
 > Video gravado usando a versão 1.0.0 :bulb:
 
-#HISTORICO DE ATUALIZAÇÕES|DESENVOLVIMENTO
 
-> Versão 1.0 
+# tecnologias utilizadas no projeto 🌐
 
-##Passo 1 - Tela de login
-  - Desenvolvimento da tela de login.
-  - Desenvolvimento da responsividade da tela de login.
+[![My Skills](https://skills.thijs.gg/icons?i=php,mysql,js,html,css&theme=dark)](https://skills.thijs.gg)
 
-##Passo 2 - Tela de inicio
-  - Desenvolvimento da tela de inicio.
-  - Desenvolvimento da responsividade da tela inicial.
 
-##Passo 3 - Funcionalidades do sistema
-  - 
+# Criador 🐱‍👤
 
-#TECNOLOGIAS UTILIZADAS
-> Front End
-HTML| CSS |JS
- - Serão usados para a estilização da pagina
-   e também para trazer uma melhor experiencia
-   para o usuario.
-> Back End
-PHP | MYSQL
- - Terão o papel de trazer todas as informações
-   cadastradas do usuario e assim tentar fornecer
-   uma experiencia unica.
-
-#PESSOAS DESENVOLVEDORAS DO PROJETO
-> Matheus Nunes - Desenvolvedor FULL STACK e responsavel pelo projeto.
+| [<img src="https://avatars.githubusercontent.com/u/83671782?v=4" width=115><br><sub>Matheus Nunes</sub>](https://github.com/0XxMxX0)
+| :---: 
+ 
