@@ -1,0 +1,253 @@
+/* GERAL */
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #FFF;
+    padding: 10px;
+    min-width: 500px;
+    margin: auto;
+}
+
+.container-width {
+    box-sizing: border-box;
+    width: 50%;
+    border: 1px solid #585656;
+    padding: 10px;
+    height: 600px;
+}
+/* LADO DIREITO */
+#container-image {
+    background-color: #C077CC;
+    border-right: none;
+    border-radius: 10px 0px 0px 10px;
+    float: left;
+}
+#background-inicio{
+    width:550px;
+    transform: translate(40px,10px);
+}
+/* LADO ESQUERDO */
+#container-login {
+    border-radius: 0px 10px 10px 0px;
+    border-left: none;
+    float: right;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#headline {
+    transform: translate(45px, 5px);
+    width: 300px;
+    color: #C077CC
+}
+#headline span {
+    font-weight: normal;
+}
+form {
+    border: 1px solid #5856564f;
+    height: 350px;
+    border-radius: 5px;
+    padding: 20px;
+    width: 350px;
+    margin: auto;
+    transform: translate(0, 50px);
+}
+.formas-links {
+    transform: translate(-16px, 20px);
+    position: relative;
+    width: 226px;
+    height: 30px;
+    margin: auto;
+    text-align: center;
+}
+#form-cadastrar {
+    position: relative;
+    left: 40px;
+}
+.formas-links a {
+    display: inline-block;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: #C077CC;
+}
+#form-logar {
+    color: #e5c1eb;
+}
+.border-effect {
+    bottom: 0;
+    position: absolute;
+    transform: translate(-70px, 0px);
+    padding-top: 30px;
+    width: 70px;
+    border-bottom: 0px solid #C077CC;
+    display: inline-block;
+    cursor: pointer;
+}
+#border-cadastrar {
+    width: 95px;
+    transform: translate(-50px, 0px);
+}
+#effect-form-logar{
+    border-bottom: 4px solid #e5c1eb;
+}
+.border-effect:hover{
+    border-bottom: 4px solid #C077CC;
+}
+
+#form-objects {
+    margin: auto;
+    width: 320px;
+    text-align: center;
+    transform: translate(0, 49px);
+}
+form input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #585656;
+    padding-bottom: 15px;
+    margin: 10px 0px 10px 0px;
+    transform: translate(0, 15px);
+
+}
+#mensagem-aviso {
+    float: left;
+    font-size: 12px;
+    color: #C077CC;
+    list-style: none;
+}
+#form-forget-password {
+    float: right;
+    color: #C077CC;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.btn_entrar {
+    background-color: #FFF;
+    color: #C077CC;
+    border: 1px solid #C077CC;
+    width: 300px;
+    height: 50px;
+    margin-top: 30px;
+    font-weight: bold;
+    padding: 0;
+}
+.btn_entrar:hover{
+    background-color: #C077CC;
+    color: #FFF;
+    border: 1px solid #C077CC;
+}
+.btn_entrar_off {
+    background-color: #FFF;
+    color: #e5c1eb;
+    border: 1px solid #e5c1eb;
+    width: 300px;
+    height: 50px;
+    margin-top: 30px;
+    font-weight: bold;
+    padding: 0;
+}
+
+
+@media only screen and (max-width: 1100px){
+    #background-inicio{
+        display: none;
+    }
+    .container-width {
+        width: 0%;
+    }
+    #container-image {
+        display: none;
+    }
+    #container-login {
+        transition: 6s;
+        border-radius: 10px;
+        border-left: 1px solid black;
+        width: 100%;
+        background-color: #C077CC;
+    }
+    form {
+        background-color: #FFF;
+    }
+    #headline {
+        color: #FFF
+    }
+}
+
+@media only screen and (max-width: 850px){
+    body {
+        padding: 0px;
+        background-color: #C077CC;
+    }
+    #headline {
+        display: none;
+    }
+    .container-width {
+        width: 100%;
+        border: none;
+        padding: 0px;
+    }
+    #container-login {
+        border-left: none;
+    }
+    form {
+        border: 1px solid #5856564f;
+        width: 90%;
+        height: 90%;
+        border-radius: 5px;
+        margin: auto;
+        transform: translate(0, 50px);
+    }
+    #form-objects {
+        margin: auto;
+        width: 500px;
+        text-align: center;
+        transform: translate(0, 80px);
+    }
+    form input {
+        width: 90%;
+        height: 35px;
+        margin: 30px 0px 5px 0px;
+    }
+    .btn_entrar {
+        background-color: #FFF;
+        color: #C077CC;
+        border: 1px solid #C077CC;
+        width: 300px;
+        height: 50px;
+        margin-top: 30px;
+        font-weight: bold;
+        padding: 0;
+        transform: translate(50px, 80px);
+    }
+    .btn_entrar_off {
+        background-color: #FFF;
+        color: #e5c1eb;
+        border: 1px solid #e5c1eb;
+        width: 300px;
+        transform: translate(50px, 80px);
+        height: 50px;
+        margin-top: 30px;
+        font-weight: bold;
+        padding: 0;
+    }
+    #mensagem-aviso {
+        float: left;
+        font-size: 12px;
+        color: #C077CC;
+        list-style: none;
+        transform: translate(24px, 20px);
+    }
+    #form-forget-password {
+        float: right;
+        color: #C077CC;
+        font-size: 12px;
+        transform: translate(-25px, 20px);
+    }
+}

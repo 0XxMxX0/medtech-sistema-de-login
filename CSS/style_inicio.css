@@ -1,0 +1,38 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+header {
+    background-color: #2435a1;
+}
+
+header ul {
+    padding: 10px;
+    margin: 0;
+}
+header ul li {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    left: 200px;
+    color: #fff;
+    font-size: 12px;
+    transform: translate(0px, -10px);
+}
+header ul #logo {
+    left: 150px;
+}
+header ul #logo img {
+    width: 180px;
+    transform: translate(0px, 13px);
+}
+header ul #login {
+    left: 770px;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
