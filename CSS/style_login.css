@@ -27,8 +27,8 @@ body {
     float: left;
 }
 #background-inicio{
-    width:550px;
-    transform: translate(40px,10px);
+    width:500px;
+    transform: translate(20px,20px);
 }
 /* LADO ESQUERDO */
 #container-login {
