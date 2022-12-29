@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt=BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="CSS/style_cadastro.css"/>
+    <link rel="icon" type="imagem/png" href="./IMG/favicon.png"/>
+    <title>MEDTECH - Cadastro</title>
+</head>
+<body>
+    <div class="successful">
+        <div class="successful-box">
+            <img class="img-successful" src="./IMG/icons-confirmar.png"/>
+            <h1 class="headline-successful">SUCESSO AO CRIAR SUA CONTA</h1>
+            <button class="button-successful">ENTRAR</button>
+        </div>
+    </div>
+    <div id="container">
+        <div class='container-width' id="container-login">
+            <div>
+                <h1 id="headline">
+                    <!-- <span>Olá,</span><br>
+                    <?php 
+                        $timezone = new DateTimeZone('America/Sao_Paulo');
+                        $timeNow = new DateTime('now', $timezone);
+                        $timeNow = $timeNow->format('H:i');
+
+                        if($timeNow >= '06:00' AND $timeNow < '12:00'){
+                            echo "Bom dia!";
+                        } else if($timeNow >= '12:00' AND $timeNow <= '18:00' ){
+                            echo "Boa tarde!";
+                        } else {
+                            echo "Boa noite!";
+                        }
+                    ?> -->
+                </h1>
+            </div>
+                
+            <form action='' method='POST'>
+
+                <div class="forms-links">
+                    <a href="#" class="form-headline" id="link-logar">Entrar</a>
+                        <div  onmouseover="mouseover()" onmouseout="mouseout()" class='border-link-effect'></div>
+                    <a href="#" class="form-headline link-active" id="link-cadastrar">Cadastrar</a>
+                        <div class='border-link-effect border-effect-active' id="border-effect-cadastrar"></div>
+                </div>
+                
+                <div id='form-objects'>
+                    <!-- <?php
+                        if(!empty($erros)){
+                            foreach($erros as $erro){
+                                echo "$erro";
+                            }
+                        }
+                    ?>  -->
+                    <input type='text' oninput='validacaoBotao()'  name='login' id='login' placeholder="Login"/>
+                    <input type='password' oninput='validacaoBotao()'  name='senha' id='senha' placeholder="Senha"/>
+                    <div class='password-icon'>
+                        <img id='1' onclick="estadoDaSenha(this)" src='IMG/icon-aberto.png'/>
+                    </div>
+                    <input type='password' oninput='validacaoBotao()'  name='confirmar-senha' id='confirmar-senha' placeholder="Confirme senha"/>
+                    <div class='password-icon' id="password-icon-2">
+                        <img id='2' onclick="estadoDaSenha(this)" src='IMG/icon-aberto.png'/>
+                    </div>
+                    <input type='submit' name='btn_entrar' class='btn_entrar_off' value='CRIAR CONTA'/>
+                </div>
+            </form>
+        </div>
+        <div class='container-width' id="container-image">
+            <img id='background-image' src="IMG/background-cadastro.gif">
+        </div>
+    </div>
+    <script src="./JS/script.js"></script>
+</body>
+</html>

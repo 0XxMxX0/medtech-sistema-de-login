@@ -1,4 +1,4 @@
-/* GERAL */
+/* CONFIGURAÇÃO GERAL */
 *{
     padding: 0;
     margin: 0;
@@ -7,11 +7,19 @@
 
 body {
     background-color: #FFF;
-    padding: 10px;
     min-width: 500px;
     margin: auto;
 }
+a {
+    text-decoration: none;
+}
 
+/* ---------------------------------------------- */
+
+/* DIVISÃO DAS TELAS */
+#container {
+    padding: 10px;
+}
 .container-width {
     box-sizing: border-box;
     width: 50%;
@@ -19,43 +27,65 @@ body {
     padding: 10px;
     height: 600px;
 }
-/* LADO DIREITO */
+/* LADO DA IMAGEM */
 #container-image {
     background-color: #C077CC;
-    border-right: none;
-    border-radius: 10px 0px 0px 10px;
-    float: left;
-}
-#background-inicio{
-    width:530px;
-    transform: translate(70px,40px);
-}
-/* LADO ESQUERDO */
-#container-login {
-    border-radius: 0px 10px 10px 0px;
     border-left: none;
+    border-radius: 0px 10px 10px 0px;
     float: right;
+}
+#background-image{
+    width:560px;
+    transform: translate(65px,5px);
+}
+/* LADO DO FORMULARIO */
+#container-login {
+    border-radius: 10px 0px 0px 10px;
+    border-right: none;
+    float: left;
     padding: 10px;
     box-sizing: border-box;
 }
-#headline {
-    transform: translate(45px, 5px);
-    width: 300px;
-    color: #C077CC
+
+/* FINALIZAÇÃO APOS O CADASTRO */
+.successful {
+    display: none;
+    background-color: #0a0a0ab9;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    box-sizing: border-box;
 }
-#headline span {
-    font-weight: normal;
-}
-form {
-    border: 1px solid #5856564f;
-    height: 350px;
-    border-radius: 5px;
-    padding: 20px;
-    width: 350px;
-    margin: auto;
+.successful-box {
+    background-color: #FFF;
+    width: 400px;
+    height: 470px;
     transform: translate(0, 50px);
+    padding: 10px;
+    margin: auto;
+    text-align: center;
 }
-.formas-links {
+.img-successful {
+    width: 200px;
+}
+.headline-successful {
+    color: #C077CC;
+    padding: 10px;
+    transform: translate(0,30px);
+}
+.button-successful {
+    transform: translate(0, 40px);
+    cursor: pointer;
+}
+.button-successful:hover{
+    background-color:#C077CC;
+}
+
+/* ---------------------------------------------- */
+
+/* LINKS PARA ENTRAR/CADASTRAR */
+.forms-links {
     transform: translate(-16px, 20px);
     position: relative;
     width: 226px;
@@ -63,22 +93,27 @@ form {
     margin: auto;
     text-align: center;
 }
-#form-cadastrar {
-    position: relative;
-    left: 40px;
-}
-.formas-links a {
+.forms-links a {
     display: inline-block;
     z-index: 1;
-    text-decoration: none;
     box-sizing: border-box;
     font-weight: bold;
+}
+.form-headline {
+    position: relative;
     color: #C077CC;
 }
-#form-logar {
+#link-cadastrar {
+    left: 40px;
+}
+
+/* EFEITOS DOS LINKS ENTRAR/CADASTRAR */
+.link-active {
     color: #e5c1eb;
 }
-.border-effect {
+
+/* BORDARS DOS LINKS ENTRAR/CADASTRAR */
+.border-link-effect {
     bottom: 0;
     position: absolute;
     transform: translate(-70px, 0px);
@@ -88,22 +123,28 @@ form {
     display: inline-block;
     cursor: pointer;
 }
-#border-cadastrar {
+#border-effect-cadastrar {
     width: 95px;
     transform: translate(-50px, 0px);
 }
-#effect-form-logar{
+.border-effect-active{
     border-bottom: 4px solid #e5c1eb;
 }
-.border-effect:hover{
+.border-link-effect:hover{
     border-bottom: 4px solid #C077CC;
 }
 
-#form-objects {
+/* ---------------------------------------------- */
+
+/* FORMULARIO DE CADASTRO */
+form {
+    border: 1px solid #5856564f;
+    height: 400px;
+    border-radius: 5px;
+    padding: 20px;
+    width: 350px;
     margin: auto;
-    width: 320px;
-    text-align: center;
-    transform: translate(0, 49px);
+    transform: translate(0, 50px);
 }
 form input {
     width: 100%;
@@ -115,30 +156,42 @@ form input {
     padding-bottom: 15px;
     margin: 10px 0px 10px 0px;
     transform: translate(0, 15px);
-
 }
-#mensagem-aviso {
+
+/* TODOS OS ITENS DO FORMULARIO */
+#form-items {
+    margin: auto;
+    width: 320px;
+    text-align: center;
+    transform: translate(0, 49px);
+}
+
+/* MENSAGEM DE ERRO/AVISO */
+#mensagem {
     float: left;
     font-size: 12px;
     color: #C077CC;
     list-style: none;
 }
+
+/* ICONE DE OCULTAR SENHA */
 .password-icon {
     position: absolute;
     right: 0;
     transform: translate(-10px,0);
-    bottom: 110px;
+    bottom: 135px;
+}
+#password-icon-2 {
+    bottom: 83px;
 }
 .password-icon img{
     width: 40px;
 }
-#form-forget-password {
-    float: right;
-    color: #C077CC;
-    font-size: 12px;
-    margin-top: 10px;
-}
-.btn_entrar {
+
+/* ---------------------------------------------- */
+
+/* BOTÃO CRIAR CONTA */
+.btn-on {
     background-color: #FFF;
     color: #C077CC;
     border: 1px solid #C077CC;
@@ -148,15 +201,10 @@ form input {
     font-weight: bold;
     padding: 0;
 }
-.btn_entrar:hover{
-    background-color: #C077CC;
-    color: #FFF;
-    border: 1px solid #C077CC;
-}
-.btn_entrar_off {
-    background-color: #FFF;
+.btn-off {
     color: #e5c1eb;
     border: 1px solid #e5c1eb;
+    background-color: #FFF;
     width: 300px;
     height: 50px;
     margin-top: 30px;
@@ -164,6 +212,7 @@ form input {
     padding: 0;
 }
 
+/* ---------------------------------------------- */
 
 @media only screen and (max-width: 1100px){
     #background-inicio{
@@ -185,14 +234,11 @@ form input {
     form {
         background-color: #FFF;
     }
-    #headline {
-        color: #FFF
-    }
+    
 }
 
 @media only screen and (max-width: 850px){
     body {
-        padding: 0px;
         background-color: #C077CC;
     }
     #headline {
@@ -206,58 +252,56 @@ form input {
     #container-login {
         border-left: none;
     }
+    
+
+    /* FORMULARIO DE CADASTRO */
     form {
-        border: 1px solid #5856564f;
         width: 90%;
         height: 90%;
-        border-radius: 5px;
-        margin: auto;
-        transform: translate(0, 50px);
-    }
-    #form-objects {
-        margin: auto;
-        width: 500px;
-        text-align: center;
-        transform: translate(0, 80px);
     }
     form input {
         width: 90%;
         height: 35px;
         margin: 30px 0px 5px 0px;
     }
-    .btn_entrar {
-        background-color: #FFF;
-        color: #C077CC;
-        border: 1px solid #C077CC;
-        width: 300px;
-        height: 50px;
-        margin-top: 30px;
-        font-weight: bold;
-        padding: 0;
-        transform: translate(50px, 80px);
+
+    /* TODOS OS ITENS DO FORMULARIO */
+    #form-objects {
+        margin: auto;
+        width: 500px;
+        text-align: center;
+        transform: translate(0, 80px);
     }
-    .btn_entrar_off {
-        background-color: #FFF;
-        color: #e5c1eb;
-        border: 1px solid #e5c1eb;
-        width: 300px;
-        transform: translate(50px, 80px);
-        height: 50px;
-        margin-top: 30px;
-        font-weight: bold;
-        padding: 0;
-    }
-    #mensagem-aviso {
+    
+    /* MENSAGEM DE ERRO/AVISO */
+    #mensagem {
         float: left;
         font-size: 12px;
         color: #C077CC;
         list-style: none;
         transform: translate(24px, 20px);
     }
-    #form-forget-password {
-        float: right;
-        color: #C077CC;
-        font-size: 12px;
-        transform: translate(-25px, 20px);
+    
+    /* ICONE DE OCULTAR SENHA */
+    .password-icon {
+        transform: translate(-10px,-10px);
     }
+    #password-icon-2 {
+        bottom: 63px;
+    }
+    
+    /* BOTÃO CRIAR CONTA */
+    .btn-on {
+        transform: translate(50px, 80px);
+    }
+    .btn-off {
+        transform: translate(50px, 80px);
+        height: 50px;
+        margin-top: 30px;
+        font-weight: bold;
+        padding: 0;
+    }
+
+   /* ---------------------------------------------- */
+
 }

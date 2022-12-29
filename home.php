@@ -1,4 +1,5 @@
-<?php
+INSERT INTO pessoas(pessoa_id, nome)
+VALUES('','teste');<?php
      // CONEXÃO
      require_once 'db_connect.php';
 

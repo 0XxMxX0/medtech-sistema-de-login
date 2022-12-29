@@ -33,7 +33,19 @@
                     mysqli_close($connect);
                     $_SESSION['logado'] = true;
                     $_SESSION['usuario_id'] = $dados['usuario_id'];
-                    header('Location: home.php');
+                    echo "
+                        <script>
+
+                            window.setTimeout(carregar,3000);
+                            
+                            function carregar(){
+                                console.log('teste');
+                    ";
+                    // header('Location: home.php');
+                    echo "
+                            }
+                        </script>
+                    ";
                 } 
                 else {
                     $erros[] = '<li id="mensagem-aviso">Usuário e senha não conferem</li>';
@@ -82,7 +94,7 @@
                 <div class="formas-links">
                     <a href="#" class="form-headline" id="form-logar">Entrar</a>
                     <div class='border-effect' id="effect-form-logar"></div>
-                    <a href="#" class="form-headline" id="form-cadastrar">Cadastrar</a>
+                    <a href="./cadastro.php" class="form-headline" id="form-cadastrar">Cadastrar</a>
                     <div onmouseover="mouseover()" onmouseout="mouseout()" class='border-effect' id="border-cadastrar"></div>
                 </div>
                 <div id='form-objects'>
@@ -95,6 +107,9 @@
                     ?> 
                     <input type='text' oninput='validacaoBotao()'  name='login' id='Seu usuario' placeholder="Login"/>
                     <input type='password' oninput='validacaoBotao()'  name='senha' id='Sua senha' placeholder="Password"/>
+                    <div class='password-icon'>
+                        <img onclick="estadoDaSenha(this)" src='IMG/icon-aberto.png'/>
+                    </div>
                     <a href="#" >
                         <p id="form-forget-password">Esqueceu a senha?</p>
                     </a>
@@ -105,5 +120,6 @@
     </div>
     
     <script src="./JS/script.js"></script>
+
 </body>
 </html>

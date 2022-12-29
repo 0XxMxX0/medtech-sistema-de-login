@@ -19,10 +19,35 @@ let botao = inputs[2];
 function validacaoBotao(){
     loginValue = login.value;
     senhaValue = senha.value;
+    let li = document.getElementById('mensagem-aviso');
+    let existencia = document.body.contains(li);
+    
+    if(existencia == true){
+        li.style.display = 'none'; 
+    }
 
     if(senhaValue != ''){
         if(loginValue != ''){
             let botaoClass = botao.className = "btn_entrar";
+        } else {
+            let botaoClass = botao.className = "btn_entrar_off";
         }
+    } else {
+        let botaoClass = botao.className = "btn_entrar_off";
+    }
+}
+
+let count = 0;
+
+function estadoDaSenha(elemento) {
+    let img = elemento;
+    if(count == 1){
+        img.src = 'IMG/icon-aberto.png';
+        senha.type = 'password';
+        count = 0
+    } else if(count == 0){
+        img.src = 'IMG/icon-fechado.png';
+        senha.type = 'text';
+        count++;
     }
 }
