@@ -237,13 +237,15 @@ form input {
     
 }
 
-@media only screen and (max-width: 850px){
+@media only screen and (max-width: 600px){
+    /* CONFIGURAÇÃO GERAL */
     body {
         background-color: #C077CC;
     }
-    #headline {
-        display: none;
-    }
+
+   /* ---------------------------------------------- */
+
+    /* DIVISÃO DAS TELAS */
     .container-width {
         width: 100%;
         border: none;
@@ -252,7 +254,6 @@ form input {
     #container-login {
         border-left: none;
     }
-    
 
     /* FORMULARIO DE CADASTRO */
     form {
@@ -272,7 +273,7 @@ form input {
         text-align: center;
         transform: translate(0, 80px);
     }
-    
+
     /* MENSAGEM DE ERRO/AVISO */
     #mensagem {
         float: left;
@@ -295,7 +296,7 @@ form input {
         transform: translate(50px, 80px);
     }
     .btn-off {
-        transform: translate(50px, 80px);
+        transform: translate(0px, 80px);
         height: 50px;
         margin-top: 30px;
         font-weight: bold;
