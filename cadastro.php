@@ -56,11 +56,11 @@
                             $erros[] = '<li id="mensagem">Não foi possivel criar o usuario! Cod.2</li>';
                         } else {
                             echo "
-                                <div class='successful'>
+                                <div class='successful' id='sucessful'>
                                     <div class='successful-box'>
                                         <img class='img-successful' src='./IMG/icons-confirmar.png'/>
                                         <h1 class='headline-successful'>SUCESSO AO CRIAR SUA CONTA</h1>
-                                        <button class='button-successful'>ENTRAR</button>
+                                        <button onclick='confirmarIncricao()' class='button-successful btn-on'>ENTRAR</button>
                                     </div>
                                 </div>
                             ";
@@ -90,11 +90,9 @@
 </head>
 <body>
     <div id="container">
-        
+       
         <div class='container-width' id="container-login">
-                
             <form action='' method='POST'>
-
                 <div class="forms-links">
                     <a href="./" class="form-headline" id="link-logar">Entrar</a>
                         <div  onmouseover="mouseover()" onmouseout="mouseout()" class='border-link-effect'></div>
@@ -128,7 +126,7 @@
                     
                     <input type='submit' name='btn_cadastrar' class='btn-off' value='CRIAR CONTA'/>
                 </div>
-                
+
             </form>
 
         </div>

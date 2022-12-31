@@ -71,3 +71,8 @@ function estadoDaSenha(elemento) {
         count++;
     }
 }
+
+// Confirmar escrição
+function confirmarIncricao() {
+    window.location.href = "index.php";
+};

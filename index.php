@@ -11,7 +11,7 @@
         $senha = mysqli_escape_string($connect, $_POST['senha']);
 
         if(empty($login) or empty($senha)){
-            $erros[] = '<li id="mensagem-aviso">O campo login/senha precisa ser preenchido!</li>';
+            $erros[] = '<li id="mensagem">O campo login/senha precisa ser preenchido!</li>';
         } else {
             $sql = "SELECT login
                     FROM usuarios
@@ -33,25 +33,13 @@
                     mysqli_close($connect);
                     $_SESSION['logado'] = true;
                     $_SESSION['usuario_id'] = $dados['usuario_id'];
-                    echo "
-                        <script>
-
-                            window.setTimeout(carregar,3000);
-                            
-                            function carregar(){
-                                console.log('teste');
-                    ";
-                    // header('Location: home.php');
-                    echo "
-                            }
-                        </script>
-                    ";
+                    header('Location: home.php');
                 } 
                 else {
-                    $erros[] = '<li id="mensagem-aviso">Usuário e senha não conferem</li>';
+                    $erros[] = '<li id="mensagem">Usuário e senha não conferem</li>';
                 }
             } else {
-                $erros[] = '<li id="mensagem-aviso">Usuário inexistente</li>';
+                $erros[] = '<li id="mensagem">Usuário inexistente</li>';
             }
         }
     } 
@@ -67,7 +55,7 @@
 <body>
     <div id="container">
         <div class='container-width' id="container-image">
-            <img id='background-inicio' src="IMG/background-inicio.gif">
+            <img id='background-image' src="IMG/background-inicio.gif">
         </div>
         <div class='container-width' id="container-login">
             <div>
@@ -90,14 +78,13 @@
             </div>
                 
             <form action='<?php echo $_SERVER['PHP_SELF']; ?>' method='POST'>
-                <!-- <h2 id="form-headline">Fazer login na sua conta</h2> -->
-                <div class="formas-links">
-                    <a href="#" class="form-headline" id="form-logar">Entrar</a>
-                    <div class='border-effect' id="effect-form-logar"></div>
-                    <a href="./cadastro.php" class="form-headline" id="form-cadastrar">Cadastrar</a>
-                    <div onmouseover="mouseover()" onmouseout="mouseout()" class='border-effect' id="border-cadastrar"></div>
+                <div class="forms-links">
+                    <a href="#" class="form-headline link-active" id="link-logar">Entrar</a>
+                        <div class='border-link-effect border-effect-active'></div>
+                    <a href="./cadastro.php"class="form-headline" id="link-cadastrar">Cadastrar</a>
+                        <div onmouseover="mouseover()" onmouseout="mouseout()" class='border-link-effect' id="border-effect-cadastrar"></div>
                 </div>
-                <div id='form-objects'>
+                <div id='form-items'>
                     <?php
                         if(!empty($erros)){
                             foreach($erros as $erro){
@@ -105,15 +92,18 @@
                             }
                         }
                     ?> 
-                    <input type='text' oninput='validacaoBotao()'  name='login' id='Seu usuario' placeholder="Login"/>
-                    <input type='password' oninput='validacaoBotao()'  name='senha' id='Sua senha' placeholder="Password"/>
+                    <input type='text' oninput='validacaoBotao()'  name='login' id='login' placeholder="Seu nome"/>
+                    <input type='password' oninput='validacaoBotao()'  name='senha' id='senha' placeholder="Sua senha"/>
+
+                    <!-- ICONE DE OCULTAR A SENHA -->
                     <div class='password-icon'>
                         <img onclick="estadoDaSenha(this)" src='IMG/icon-aberto.png'/>
                     </div>
+
                     <a href="#" >
-                        <p id="form-forget-password">Esqueceu a senha?</p>
+                        <p id="password-forget">Esqueceu a senha?</p>
                     </a>
-                    <input type='submit' name='btn_entrar' class='btn_entrar_off' value='ENTRAR'/>
+                    <input type='submit' name='btn_entrar' class='btn-off' value='ENTRAR'/>
                 </div>
             </form>
         </div>
