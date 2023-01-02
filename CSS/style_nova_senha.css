@@ -22,39 +22,65 @@ a {
 }
 .container-width {
     box-sizing: border-box;
-    width: 50%;
+    width: 100%;
     border: 1px solid #585656;
     padding: 10px;
     height: 600px;
 }
-/* LADO DIREITO */
-#container-image {
+/* LADO DA IMAGEM */
+/* #container-image {
     background-color: #C077CC;
-    border-right: none;
-    border-radius: 10px 0px 0px 10px;
-    float: left;
-}
-#background-image{
-    width:500px;
-    transform: translate(70px,40px);
-}
-/* LADO ESQUERDO */
-#container-login {
-    border-radius: 0px 10px 10px 0px;
     border-left: none;
+    border-radius: 0px 10px 10px 0px;
     float: right;
+} */
+/* #background-image{
+    width:560px;
+    transform: translate(65px,5px);
+} */
+/* LADO DO FORMULARIO */
+#container-login {
+    border-radius: 10px;
+    /* border-right: none; */
+    float: left;
     padding: 10px;
+    background-color: #C077CC;
     box-sizing: border-box;
 }
 
-/* TITULO DO FORMULARIO */
-#headline {
-    transform: translate(45px, 5px);
-    width: 300px;
-    color: #C077CC
+/* FINALIZAÇÃO APOS O CADASTRO */
+.successful {
+    background-color: #0a0a0ab9;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    box-sizing: border-box;
 }
-#headline span {
-    font-weight: normal;
+.successful-box {
+    background-color: #FFF;
+    width: 400px;
+    height: 470px;
+    transform: translate(0, 50px);
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+}
+.img-successful {
+    width: 200px;
+}
+.headline-successful {
+    color: #C077CC;
+    padding: 10px;
+    transform: translate(0,30px);
+}
+.button-successful {
+    transform: translate(0, 40px);
+    cursor: pointer;
+}
+.button-successful:hover{
+    background-color:#C077CC;
+    color: #FFF;
 }
 
 /* ---------------------------------------------- */
@@ -71,7 +97,6 @@ a {
 .forms-links a {
     display: inline-block;
     z-index: 1;
-    text-decoration: none;
     box-sizing: border-box;
     font-weight: bold;
 }
@@ -92,30 +117,9 @@ a {
 .border-link-effect {
     bottom: 0;
     position: absolute;
-    transform: translate(-70px, 0px);
+    transform: translate(-146px, 0px);
     padding-top: 30px;
-    width: 70px;
-    border-bottom: 0px solid #C077CC;
-    display: inline-block;
-    cursor: pointer;
-}
-#border-effect-cadastrar {
-    width: 95px;
-    transform: translate(-50px, 0px);
-}
-.border-effect-active{
-    border-bottom: 4px solid #e5c1eb;
-}
-.border-link-effect:hover{
-    border-bottom: 4px solid #C077CC;
-}
-/* BORDARS DOS LINKS ENTRAR/CADASTRAR */
-.border-link-effect {
-    bottom: 0;
-    position: absolute;
-    transform: translate(-70px, 0px);
-    padding-top: 30px;
-    width: 70px;
+    width: 150px;
     border-bottom: 0px solid #C077CC;
     display: inline-block;
     cursor: pointer;
@@ -135,8 +139,9 @@ a {
 
 /* FORMULARIO DE CADASTRO */
 form {
+    background-color: #FFF;
     border: 1px solid #5856564f;
-    height: 350px;
+    height: 400px;
     border-radius: 5px;
     padding: 20px;
     width: 350px;
@@ -154,6 +159,16 @@ form input {
     margin: 10px 0px 10px 0px;
     transform: translate(0, 15px);
 }
+
+/* CAMPO DE SENHA */
+.campo-input-off {
+    color: #e4e2e2;
+    border-color: #e4e2e2;
+}
+
+.campo-input-off::placeholder {
+    color: #e4e2e2;
+  }
 
 /* TODOS OS ITENS DO FORMULARIO */
 #form-items {
@@ -176,24 +191,18 @@ form input {
     position: absolute;
     right: 0;
     transform: translate(-10px,0);
-    bottom: 110px;
+    bottom: 135px;
+}
+#password-icon-2 {
+    bottom: 83px;
 }
 .password-icon img{
     width: 40px;
 }
 
-/* BOTÃO ESQUECER SENHA */
-#password-forget {
-    float: right;
-    color: #C077CC;
-    font-size: 12px;
-    margin-top: 10px;
-}
-
 /* ---------------------------------------------- */
 
 /* BOTÃO CRIAR CONTA */
-
 .btn-on {
     background-color: #FFF;
     color: #C077CC;
@@ -203,14 +212,12 @@ form input {
     margin-top: 30px;
     font-weight: bold;
     padding: 0;
-    transform: translate(0px, 20px);
 }
 .btn-off {
-    background-color: #FFF;
     color: #e5c1eb;
     border: 1px solid #e5c1eb;
+    background-color: #FFF;
     width: 300px;
-    transform: translate(0px, 20px);
     height: 50px;
     margin-top: 30px;
     font-weight: bold;
@@ -219,8 +226,8 @@ form input {
 
 /* ---------------------------------------------- */
 
-@media only screen and (max-width: 1185px){
-    #background-image{
+@media only screen and (max-width: 1100px){
+    #background-inicio{
         display: none;
     }
     .container-width {
@@ -238,9 +245,7 @@ form input {
     form {
         background-color: #FFF;
     }
-    #headline {
-        display: none;
-    }
+    
 }
 
 @media only screen and (max-width: 600px){
@@ -248,9 +253,10 @@ form input {
     body {
         background-color: #C077CC;
     }
-    
+
     /* ---------------------------------------------- */
-    
+
+    /* DIVISÃO DAS TELAS */
     .container-width {
         width: 100%;
         border: none;
@@ -259,16 +265,11 @@ form input {
     #container-login {
         border-left: none;
     }
-    #headline {
-        display: none;
-    }
-    
-   /* ---------------------------------------------- */
 
-   /* FORMULARIO DE CADASTRO */
+    /* FORMULARIO DE CADASTRO */
     form {
         width: 90%;
-        height: 80%;
+        height: 88%;
         padding: 0px;
     }
     form input {
@@ -276,8 +277,10 @@ form input {
         height: 35px;
         margin: 30px 0px 5px 0px;
     }
+
+    /* TODOS OS ITENS DO FORMULARIO */
     #form-items {
-    transform: translate(0, 60px);
+        transform: translate(0, 50px);
     }
 
     /* MENSAGEM DE ERRO/AVISO */
@@ -288,22 +291,27 @@ form input {
         list-style: none;
         transform: translate(24px, 20px);
     }
-    #password-forget {
-        float: right;
-        color: #C077CC;
-        font-size: 12px;
-        transform: translate(-25px, 20px);
+    
+    /* ICONE DE OCULTAR SENHA */
+    .password-icon {
+        transform: translate(-10px,-10px);
     }
-
+    #password-icon-2 {
+        bottom: 63px;
+    }
+    
     /* BOTÃO CRIAR CONTA */
     .btn-on {
         transform: translate(50px, 80px);
     }
     .btn-off {
-        transform: translate(0px, 40px);
+        transform: translate(0px, 20px);
         height: 50px;
         margin-top: 30px;
         font-weight: bold;
         padding: 0;
     }
+
+   /* ---------------------------------------------- */
+
 }

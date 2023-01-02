@@ -110,7 +110,7 @@
                     ?>
                     <input type='text' oninput='validacaoBotao()'  name='name' id=name' placeholder="Seu nome"/>
                     <input type='text' oninput='validacaoBotao()'  name='login' id='login' placeholder="Seu login"/>
-                    <input type='password' oninput='validacaoBotao()'  name='senha' id='senha' placeholder="Senha"/>
+                    <input type='text' oninput='validacaoBotao()'  name='senha' id='senha' placeholder="Senha"/>
                     
                     <!-- ICONE DE OCULTAR A SENHA -->
                     <div class='password-icon'>

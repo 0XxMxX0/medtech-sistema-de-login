@@ -100,7 +100,7 @@
                         <img onclick="estadoDaSenha(this)" src='IMG/icon-aberto.png'/>
                     </div>
 
-                    <a href="#" >
+                    <a href="nova_senha.php" >
                         <p id="password-forget">Esqueceu a senha?</p>
                     </a>
                     <input type='submit' name='btn_entrar' class='btn-off' value='ENTRAR'/>

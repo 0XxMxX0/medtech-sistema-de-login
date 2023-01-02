@@ -28,12 +28,12 @@ function validacaoBotao(){
 
     if(senhaValue != ''){
         if(loginValue != ''){
-            let botaoClass = botao.className = "btn_entrar";
+            let botaoClass = botao.className = "btn-on";
         } else {
-            let botaoClass = botao.className = "btn_entrar_off";
+            let botaoClass = botao.className = "btn-off";
         }
     } else {
-        let botaoClass = botao.className = "btn_entrar_off";
+        let botaoClass = botao.className = "btn-off";
     }
 }
 
