@@ -7,8 +7,8 @@
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=VERSÃO&message=1.0.0&color=C077CC&style=for-the-badge)
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=DATA%20DA%20CRIAÇÃO&message=DEZ/22&color=e5c1eb&style=for-the-badge)
 
-> **Projeto com foco total na linguagem PHP, esse projeto não foi tão dificil de fazer mais requeve tempo e bastante esfoço
->   mas todos os projetos são assim, pois quando você ver finalizado vale toda a pena..**
+> **Projeto com foco total na linguagem PHP
+**
 
 # Índice 
 
